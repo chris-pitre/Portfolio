@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ['Didact\\ Gothic']
+      sans: ['Courier\\ New']
     },
   },
   plugins: [],
