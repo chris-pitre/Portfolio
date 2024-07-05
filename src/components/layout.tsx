@@ -8,13 +8,11 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({pageTitle, children}) => {
     return (
-        <div>
+        <div className='flex bg-black'>
             <Navbar />
-            <main>
-                <div className='text-center'>
-                    {children}
-                </div>
-            </main>
+            <div className='flex-1'>
+                {children}
+            </div>
         </div>
     )
 }
