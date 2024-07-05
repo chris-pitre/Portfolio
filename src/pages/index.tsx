@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 const IndexPage = () => {
     return (
         <Layout pageTitle="Home Page">
-            <h1 className='text-5xl mx-10'>Welcome to my Portfolio!</h1>
+            <h1 className='text-5xl'>Welcome to my Portfolio!</h1>
         </Layout>
     )
 }
