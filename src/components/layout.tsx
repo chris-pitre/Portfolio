@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Navbar from './navbar'
+import WebGLShader from '../components/webglshader'
 
 interface LayoutProps {
     pageTitle: string;
@@ -8,12 +9,17 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({pageTitle, children}) => {
     return (
-        <div className='flex bg-black'>
+        <div>
+            <WebGLShader />
+            <div className='flex'>
             <Navbar />
-            <div className='flex-1'>
-                {children}
+                    <div className='grid place-items-center h-screen'>
+                        <div className='col-start-1 row-start-1'>
+                            {children}
+                        </div>
+                    </div>
             </div>
-        </div>
+        </div> 
     )
 }
 

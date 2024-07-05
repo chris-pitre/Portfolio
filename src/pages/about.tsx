@@ -5,7 +5,7 @@ const AboutPage = () => {
     return (
         <main>
             <Layout pageTitle="About Me">
-                <p>Lorem ipsum</p>
+                <p className='text-5xl mx-10'>Lorem ipsum</p>
             </Layout>
         </main>
     )

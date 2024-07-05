@@ -5,7 +5,7 @@ const ProjectPage = () => {
     return (
         <main>
             <Layout pageTitle="Projects">
-                <p>here are some projects</p>
+                <p className='text-5xl mx-10'>here are some projects</p>
             </Layout>
         </main>
     )
