@@ -12,7 +12,7 @@ interface NavbarItemProps {
 const NavbarItem: React.FC<NavbarItemProps> = ({itemLink, content, isActive}) => {
     return (
         <Link to={itemLink}>
-            <li className={`mt-4 py-2 px-4 text-white mr-4 p-2 rounded bg-opacity-50 text-center transform transition-transform duration-500 ${isActive ? 'bg-rose-900 hover:scale-110' : 'hover:bg-rose-700 hover:scale-110'}`}>
+            <li className={`mt-4 py-2 px-4 text-white p-2 rounded bg-opacity-50 text-center transform transition-transform duration-500 ${isActive ? 'bg-rose-900 hover:scale-110' : 'hover:bg-rose-700 hover:scale-110'}`}>
                 {content}
             </li>
         </Link>
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
                 </Link>
             </div>
             
-            <ul className={`mt-4 sm:flex sm:flex-col ${isOpen ? 'block' : 'hidden'}`}>
+            <ul className={`mt-4 sm:flex sm:flex-col bg-slate-400 bg-opacity-40 sm:bg-transparent ${isOpen ? 'block' : 'hidden'}`}>
                 <NavbarItem itemLink="/" content="Home" isActive={location.pathname === '/'} />
                 <NavbarItem itemLink="/about" content="About Me" isActive={location.pathname === '/about/'} />
                 <NavbarItem itemLink="/projects" content="Projects" isActive={location.pathname === '/projects/'} />

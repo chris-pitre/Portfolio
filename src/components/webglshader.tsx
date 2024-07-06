@@ -167,7 +167,7 @@ const WebGLShader = () => {
         };
     }, []);
     return (
-    <canvas ref={canvasRef} className='w-full h-full absolute -z-50'/>
+    <canvas ref={canvasRef} className='w-full h-full fixed -z-50'/>
     );
 }
 
