@@ -21,14 +21,29 @@ const NavbarItem: React.FC<NavbarItemProps> = ({itemLink, content, isActive}) =>
 
 const Navbar: React.FC = () => {
     const location = useLocation();
+    const [isOpen, setIsOpen] = React.useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
-        <div className='h-screen w-64 p-4 text-white'>
-            <Link to="/" className='justify-between flex py-2 items-center transform transition-transform duration-500 hover:scale-110'>
+        <div className='h-screen w-full sm:w-64 p-4 fixed text-white'>
+            <Link to="/" className='hidden sm:flex justify-between py-2 items-center transform transition-transform duration-500 hover:scale-110'>
                 <img src={logo} alt='Website Logo' className="h-12 w-auto object-contain rounded" loading="lazy" />
                 <span className=" text-white text-xl font-bold">Chris Pitre</span>
             </Link>
-            <ul className="mt-4">
+            <div className='sm:hidden flex items-center justify-between'>
+                <button onClick={toggleMenu} className='font-bold'>
+                    ☰ Menu
+                </button>
+                <span className='font-bold'>Chris Pitre</span>
+                <Link to="/">
+                    <img src={logo} alt='Website Logo' className="h-8 w-auto object-contain rounded" loading="lazy" />
+                </Link>
+            </div>
+            
+            <ul className={`mt-4 sm:flex sm:flex-col ${isOpen ? 'block' : 'hidden'}`}>
                 <NavbarItem itemLink="/" content="Home" isActive={location.pathname === '/'} />
                 <NavbarItem itemLink="/about" content="About Me" isActive={location.pathname === '/about/'} />
                 <NavbarItem itemLink="/projects" content="Projects" isActive={location.pathname === '/projects/'} />
