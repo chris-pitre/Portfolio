@@ -12,7 +12,7 @@ interface NavbarItemProps {
 const NavbarItem: React.FC<NavbarItemProps> = ({itemLink, content, isActive}) => {
     return (
         <Link to={itemLink}>
-            <li className={`mt-4 py-2 px-4 text-white p-2 rounded bg-opacity-50 text-center transform transition-transform duration-500 ${isActive ? 'bg-rose-900 hover:scale-110' : 'hover:bg-rose-700 hover:scale-110'}`}>
+            <li className={`mt-4 py-2 px-4 text-white p-2 rounded bg-opacity-50 text-center transform transition-transform duration-500 ${isActive ? 'bg-rose-900 2xl:hover:scale-110' : 'hover:bg-rose-700 2xl:hover:scale-110'}`}>
                 {content}
             </li>
         </Link>
@@ -28,12 +28,12 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <div className='h-screen w-full sm:w-64 p-4 fixed text-white'>
-            <Link to="/" className='hidden sm:flex justify-between py-2 items-center transform transition-transform duration-500 hover:scale-110'>
+        <div className='h-screen w-full 2xl:w-64 p-4 fixed text-white'>
+            <Link to="/" className='hidden 2xl:flex justify-between py-2 items-center transform transition-transform duration-500 hover:scale-110'>
                 <img src={logo} alt='Website Logo' className="h-12 w-auto object-contain rounded" loading="lazy" />
                 <span className=" text-white text-xl font-bold">Chris Pitre</span>
             </Link>
-            <div className='sm:hidden flex items-center justify-between'>
+            <div className='2xl:hidden flex items-center justify-between'>
                 <button onClick={toggleMenu} className='font-bold'>
                     ☰ Menu
                 </button>
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
                 </Link>
             </div>
             
-            <ul className={`mt-4 sm:flex sm:flex-col bg-slate-400 bg-opacity-40 sm:bg-transparent ${isOpen ? 'block' : 'hidden'}`}>
+            <ul className={`mt-4 2xl:flex 2xl:flex-col bg-slate-400 bg-opacity-40 2xl:bg-transparent ${isOpen ? 'block' : 'hidden'}`}>
                 <NavbarItem itemLink="/" content="Home" isActive={location.pathname === '/'} />
                 <NavbarItem itemLink="/about" content="About Me" isActive={location.pathname === '/about/'} />
                 <NavbarItem itemLink="/projects" content="Projects" isActive={location.pathname === '/projects/'} />
