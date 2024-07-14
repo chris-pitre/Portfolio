@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio_website=self.webpackChunkportfolio_website||[]).push([[691],{7200:function(e,t,l){l.r(t),l.d(t,{Head:function(){return n}});var o=l(7294),a=l(8689);const n=()=>o.createElement("title",null,"Home Page");t.default=()=>o.createElement(a.Z,{pageTitle:"Home Page"},o.createElement("h1",{className:"text-5xl"},"Welcome to my Portfolio!"))}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-aeaeca5ee1dff3bf73c4.js.map

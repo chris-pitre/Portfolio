@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio_website=self.webpackChunkportfolio_website||[]).push([[317],{7166:function(e,t,l){l.r(t),l.d(t,{Head:function(){return a}});var r=l(7294),n=l(8689);const a=()=>r.createElement("title",null,"Projects");t.default=()=>r.createElement("main",null,r.createElement(n.Z,{pageTitle:"Projects"},r.createElement("p",{className:"text-5xl mx-10"},"here are some projects")))}}]);
+//# sourceMappingURL=component---src-pages-projects-tsx-d67ff1cd14eb43cdb99f.js.map
